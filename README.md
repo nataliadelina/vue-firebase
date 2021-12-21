@@ -22,3 +22,18 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+### Font Awesome
+```
+npm i --save-dev @fortawesome/fontawesome-free @fortawesome/vue-fontawesome @fortawesome/fontawesome-svg-core @fortawesome/free-solid-svg-icons
+```
+
+### Firebase
+```
+npm i --save-dev firebase vuefire
+```
+
+### Another Installation
+```
+npm i --save-dev bootstrap jquery popper.js
+```
