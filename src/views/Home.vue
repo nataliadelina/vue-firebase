@@ -1,6 +1,9 @@
 <template>
   <div class="container text-center">
     <div class="row justify-content-center">
+      <div class="text-secondary text-center">
+        welcome back <span class="font-weight-bold">{{ user }}</span>
+      </div>
       <div class="col-10 col-md-10 col-lg-8 col-xl-7">
         <h4 class="display-4 text-primary mt-3 mb-2">Meeting Log</h4>
         <p class="lead">
@@ -33,11 +36,25 @@
 
 <script>
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+import db from "../db";
 
 export default {
   name: "home",
   components: {
     FontAwesomeIcon,
+  },
+  data() {
+    return {
+      user: null,
+    };
+  },
+  mounted() {
+    db.collection("users")
+      .doc("AmkGqYvyrb2mv3TqbErs")
+      .get()
+      .then((snapshot) => {
+        this.user = snapshot.data().name;
+      });
   },
 };
 </script>

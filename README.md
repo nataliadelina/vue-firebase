@@ -36,7 +36,7 @@ npm i --save @fortawesome/vue-fontawesome@prerelease
 
 ### Firebase
 ```
-npm i --save-dev firebase vuefire
+npm i --save firebase vuefire
 ```
 
 ### Another Installation
